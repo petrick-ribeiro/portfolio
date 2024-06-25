@@ -1,17 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
     <>
-      <Header />
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}>
-            <Route path="skills" />
-            <Route path="project" />
+            <Route path="skills" element={<Skills />} />
+            <Route path="projects" />
             <Route path="about" />
           </Route>
         </Routes>

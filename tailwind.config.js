@@ -9,6 +9,7 @@ export default {
       base: "#FDFEF6",
       peach: "#FFECDC",
       rose: "#E6DDDE",
+      subtext: "#7c7f93",
       white: "#FFFFFF",
     },
     fontFamily: {

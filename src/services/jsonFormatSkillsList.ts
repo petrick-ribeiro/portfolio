@@ -1,5 +1,5 @@
+import AnsibleSVGIcon from "../assets/svg/AnsibleSVGIcon";
 import AWSSVGIcon from "../assets/svg/AWSSVGIcon";
-import AnsibleSVGIcon from "../assets/svg/AnsibleSVGIcon.1";
 import DockerSVGIcon from "../assets/svg/DockerSVGIcon";
 import GitHubActionsSVGIcon from "../assets/svg/GitHubActionsSVGIcon";
 import GolangSVGIcon from "../assets/svg/GolangSVGIcon";

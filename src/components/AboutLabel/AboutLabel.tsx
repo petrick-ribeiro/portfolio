@@ -1,4 +1,4 @@
-import { AboutLabelProps } from "./types/AboutLabelProps";
+import { AboutLabelProps } from "../../pages/About/components/types/AboutLabelProps";
 
 const AboutLabel = (props: AboutLabelProps) => {
   return (
@@ -15,12 +15,9 @@ const AboutLabel = (props: AboutLabelProps) => {
 
       <div className="text-subtext">
         <span>
-          {
-            props.startDate ?
-              `${props.startDate} - ${props.endDate}`
-              :
-              props.endDate
-          }
+          {props.startDate
+            ? `${props.startDate} - ${props.endDate}`
+            : props.endDate}
         </span>
       </div>
     </div>

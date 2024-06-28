@@ -1,5 +1,5 @@
 import { ComponentType } from "react";
-import { SVGIconProps } from "../../../../assets/svg/types/SVGIconProps";
+import { SVGIconProps } from "../../assets/svg/types/SVGIconProps";
 
 export type SkillLabelProps = {
   skill: string;

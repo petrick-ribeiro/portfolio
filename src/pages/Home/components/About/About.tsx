@@ -1,15 +1,15 @@
-import EducationSVGIcon from "../../assets/svg/EducationSVGIcon";
-import LibraryBookSVGIcon from "../../assets/svg/LibraryBookSVGIcon";
-import WorkSVGIcon from "../../assets/svg/WorkSVGIcon";
-import Section from "../../components/Section";
-import { courseList } from "../../services/jsonFormatCourseList";
+import EducationSVGIcon from "../../../../assets/svg/EducationSVGIcon";
+import LibraryBookSVGIcon from "../../../../assets/svg/LibraryBookSVGIcon";
+import WorkSVGIcon from "../../../../assets/svg/WorkSVGIcon";
+import AboutLabel from "../../../../components/AboutLabel";
+import Section from "../../../../components/Section";
+import { courseList } from "../../../../services/jsonFormatCourseList";
 import {
   educationList,
   workExperienceList,
-} from "../../services/jsonFormatExperienceList";
-import { CourseType } from "../../types/CourseType";
-import { ExperienceType } from "../../types/ExperienceType";
-import AboutLabel from "./components/AboutLabel";
+} from "../../../../services/jsonFormatExperienceList";
+import { CourseType } from "../../../../types/CourseType";
+import { ExperienceType } from "../../../../types/ExperienceType";
 
 export const About = () => {
   return (

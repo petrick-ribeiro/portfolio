@@ -1,7 +1,7 @@
-import Section from "../../components/Section";
-import { jsonFormatDevSkills } from "../../services/jsonFormatSkillsList";
-import { SkillType } from "../../types/SkillType";
-import SkillLabel from "./components/SkillLabel";
+import Section from "../../../../components/Section";
+import SkillLabel from "../../../../components/SkillLabel";
+import { jsonFormatDevSkills } from "../../../../services/jsonFormatSkillsList";
+import { SkillType } from "../../../../types/SkillType";
 
 const Skills = () => {
   return (

@@ -1,11 +1,12 @@
-import { Outlet } from "react-router-dom";
 import Header from "../../components/Header";
-import HomeCard from "./HomeCard";
+import { About } from "./components/About/About";
+import HomeCard from "./components/HomeCard";
+import Skills from "./components/Skills";
 
 const Home = () => {
   return (
     <div className="grid min-h-screen grid-cols-[0_1fr] grid-rows-[98px_1fr] xl:grid-cols-[auto_1fr]">
-      <div className="sticky top-0 col-span-full row-start-1 grid grid-cols-2 grid-rows-2 items-center">
+      <div className="col-span-full row-start-1 grid grid-cols-2 grid-rows-2 items-center">
         <Header />
       </div>
 
@@ -15,13 +16,15 @@ const Home = () => {
             <HomeCard />
           </div>
 
-          <div className="col-start-5 col-end-12 overflow-y-scroll">
+          <div className="col-start-5 col-end-12">
             <div className="flex items-center justify-center">
-              <Outlet />
+              <About />
+            </div>
+
+            <div className="flex items-center justify-center">
+              <Skills />
             </div>
           </div>
-
-          <div className="col-start-5 col-end-11 flex justify-center text-black"></div>
         </div>
       </main>
     </div>

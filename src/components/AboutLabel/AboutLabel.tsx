@@ -1,4 +1,4 @@
-import { AboutLabelProps } from "../../pages/About/components/types/AboutLabelProps";
+import { AboutLabelProps } from "../types/AboutLabelProps";
 
 const AboutLabel = (props: AboutLabelProps) => {
   return (

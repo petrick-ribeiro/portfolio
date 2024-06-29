@@ -3,9 +3,15 @@ import { ExperienceType } from "../types/ExperienceType";
 export const workExperienceList: ExperienceType[] = [
   {
     name: "Spacecom Monitoramento S/A",
+    description: "Analista de T.I",
+    startDate: "Jun 2024",
+    endDate: "Atualmente",
+  },
+  {
+    name: "Spacecom Monitoramento S/A",
     description: "Técnico em Informática",
     startDate: "Fev 2022",
-    endDate: "Atualmente",
+    endDate: "Jun 2024",
   },
   {
     name: "Spacecom Monitoramento S/A",

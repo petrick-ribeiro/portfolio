@@ -1,7 +1,9 @@
 import Header from "../../components/Header";
-import { About } from "./components/About/About";
+import CoursesSection from "./components/CoursesSection";
+import EducationSection from "./components/EducationSection";
 import HomeCard from "./components/HomeCard";
-import Skills from "./components/Skills";
+import Skills from "./components/SkillsSection";
+import WorkSection from "./components/WorkSection";
 
 const Home = () => {
   return (
@@ -16,14 +18,14 @@ const Home = () => {
             <HomeCard />
           </div>
 
-          <div className="col-start-5 col-end-12">
-            <div className="flex items-center justify-center">
-              <About />
-            </div>
+          <div className="col-start-6 col-end-11 space-y-16 ">
+            <Skills />
 
-            <div className="flex items-center justify-center">
-              <Skills />
-            </div>
+            <WorkSection />
+
+            <EducationSection />
+
+            <CoursesSection />
           </div>
         </div>
       </main>

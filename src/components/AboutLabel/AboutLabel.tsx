@@ -2,8 +2,8 @@ import { AboutLabelProps } from "../types/AboutLabelProps";
 
 const AboutLabel = (props: AboutLabelProps) => {
   return (
-    <div className="w-4/5 rounded-md p-4 space-y-2 border border-rose shadow-md bg-white">
-      <div className="flex space-x-4">
+    <div className="w-full rounded-md p-4 border border-blue shadow-md bg-white">
+      <div className="flex items-center justify-start space-x-4">
         <div className="rounded-full w-fit h-fit p-2 border border-blue bg-base">
           {props.children}
         </div>

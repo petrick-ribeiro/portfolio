@@ -3,9 +3,9 @@ import SkillLabel from "../../../../components/SkillLabel";
 import { jsonFormatDevSkills } from "../../../../services/jsonFormatSkillsList";
 import { SkillType } from "../../../../types/SkillType";
 
-const Skills = () => {
+const SkillsSection = () => {
   return (
-    <Section title="Habilidades">
+    <Section id="#skills" title="Habilidades">
       <div className="grid grid-cols-4">
         {jsonFormatDevSkills.map((skill: SkillType, index: number) => {
           return (
@@ -24,4 +24,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsSection;

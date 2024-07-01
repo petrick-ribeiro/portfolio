@@ -2,7 +2,7 @@ import SideBar from "../../components/Navigation/SideBar";
 import CoursesSection from "./components/CoursesSection";
 import EducationSection from "./components/EducationSection";
 import HomeCard from "./components/HomeCard";
-import Skills from "./components/SkillsSection";
+import SkillsSection from "./components/SkillsSection";
 import WorkSection from "./components/WorkSection";
 
 const Home = () => {
@@ -13,12 +13,12 @@ const Home = () => {
           <SideBar />
         </div>
 
-        <div className="col-span-full col-start-1 col-end-4 flex items-start justify-center rounded-lg py-20 bg-base shadow-lg">
+        <div className="col-span-full col-start-1 col-end-5 flex items-start justify-center rounded-lg py-20 bg-base shadow-lg">
           <HomeCard />
         </div>
 
-        <div className="h-screen overflow-scroll no-scrollbar col-start-4 col-end-12 space-y-24 py-20 px-40 bg-base">
-          <Skills />
+        <div className="h-screen overflow-scroll overflow-x-hidden col-start-5 col-end-12 space-y-24 py-20 px-20 bg-base">
+          <SkillsSection />
 
           <WorkSection />
 

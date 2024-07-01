@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import SideBar from "../../components/Navigation/SideBar";
 import CoursesSection from "./components/CoursesSection";
 import EducationSection from "./components/EducationSection";
 import HomeCard from "./components/HomeCard";
@@ -7,29 +7,27 @@ import WorkSection from "./components/WorkSection";
 
 const Home = () => {
   return (
-    <div className="grid min-h-screen grid-cols-[0_1fr] grid-rows-[98px_1fr] xl:grid-cols-[auto_1fr]">
-      <div className="col-span-full row-start-1 grid grid-cols-2 grid-rows-2 items-center">
-        <Header />
-      </div>
-
-      <main className="col-start-0 col-end-3 row-start-2 grid grid-cols-4 sm:grid-cols-8 xl:grid-cols-12">
-        <div className="col-span-full grid grid-cols-[repeat(11,1fr)] grid-rows-[1fr]">
-          <div className="ml-40 col-start-1 col-end-5 flex justify-center bg-green-500">
-            <HomeCard />
-          </div>
-
-          <div className="col-start-6 col-end-11 space-y-16 ">
-            <Skills />
-
-            <WorkSection />
-
-            <EducationSection />
-
-            <CoursesSection />
-          </div>
+    <main className="flex flex-col min-h-screen bg-white">
+      <div className="col-span-full grid grid-cols-[repeat(11,1fr)]">
+        <div className="p-2 col-start-0 col-end-1">
+          <SideBar />
         </div>
-      </main>
-    </div>
+
+        <div className="col-span-full col-start-1 col-end-4 flex items-start justify-center rounded-lg py-20 bg-base shadow-lg">
+          <HomeCard />
+        </div>
+
+        <div className="h-screen overflow-scroll no-scrollbar col-start-4 col-end-12 space-y-24 py-20 px-40 bg-base">
+          <Skills />
+
+          <WorkSection />
+
+          <EducationSection />
+
+          <CoursesSection />
+        </div>
+      </div>
+    </main>
   );
 };
 

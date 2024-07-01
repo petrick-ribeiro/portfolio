@@ -6,7 +6,7 @@ import LibraryBookSVGIcon from "../../../../assets/svg/LibraryBookSVGIcon";
 
 const CoursesSection = () => {
   return (
-    <Section title="Courses">
+    <Section title="Cursos / Certificações">
       <div className="grid grid-cols-2 gap-4">
         {courseList.map((course: CourseType, index: number) => {
           return (

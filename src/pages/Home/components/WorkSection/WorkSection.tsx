@@ -6,7 +6,7 @@ import { ExperienceType } from "../../../../types/ExperienceType";
 
 const WorkSection = () => {
   return (
-    <Section title="Work Experience">
+    <Section title="Experiência de Trabalho">
       <div className="grid grid-cols-2 gap-4">
         {workExperienceList.map((work: ExperienceType, index: number) => {
           return (

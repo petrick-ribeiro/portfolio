@@ -2,9 +2,9 @@ import { AboutLabelProps } from "../types/AboutLabelProps";
 
 const AboutLabel = (props: AboutLabelProps) => {
   return (
-    <div className="w-full rounded-md p-4 border border-blue shadow-md bg-white">
+    <div className="w-full rounded-md p-4 border border-white shadow-md bg-white">
       <div className="flex items-center justify-start space-x-4">
-        <div className="rounded-full w-fit h-fit p-2 border border-blue bg-base">
+        <div className="rounded-full w-fit h-fit p-2 border border-blue bg-base shadow-md">
           {props.children}
         </div>
         <div>

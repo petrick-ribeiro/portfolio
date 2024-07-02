@@ -1,6 +1,6 @@
 import { SVGIconProps } from "./types/SVGIconProps";
 
-const WorkSVGIcon = (props: SVGIconProps) => {
+const MenuCloseSVGIcon = (props: SVGIconProps) => {
   return (
     <svg
       className={props.className}
@@ -13,10 +13,10 @@ const WorkSVGIcon = (props: SVGIconProps) => {
         className="fill-current"
         fill={props.fill || "#000"}
         xmlns="http://www.w3.org/2000/svg"
-        d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm400 360H600v80H360v-80H160v160h640v-160Zm-360 0h80v-80h-80v80Zm-280-80h200v-80h240v80h200v-200H160v200Zm320 40Z"
+        d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"
       />
     </svg>
   );
 };
 
-export default WorkSVGIcon;
+export default MenuCloseSVGIcon;

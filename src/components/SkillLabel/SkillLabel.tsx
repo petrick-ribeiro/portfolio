@@ -1,4 +1,4 @@
-import { SkillLabelProps } from "./types/SkillLabelProps";
+import { SkillLabelProps } from "../types/SkillLabelProps";
 
 const SkillLabel = ({
   skill,

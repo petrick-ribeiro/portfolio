@@ -5,7 +5,7 @@ import { SkillType } from "../../../../types/SkillType";
 
 const SkillsSection = () => {
   return (
-    <Section id="#skills" title="Habilidades">
+    <Section id="skills-section" title="Habilidades">
       <div className="grid grid-cols-4">
         {jsonFormatDevSkills.map((skill: SkillType, index: number) => {
           return (

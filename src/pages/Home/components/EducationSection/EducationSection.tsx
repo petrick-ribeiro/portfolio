@@ -6,7 +6,7 @@ import { ExperienceType } from "../../../../types/ExperienceType";
 
 const EducationSection = () => {
   return (
-    <Section id="#education" title="Formação Acadêmica">
+    <Section id="education-section" title="Formação Acadêmica">
       <div className="grid grid-cols-2 gap-4">
         {educationList.map((education: ExperienceType, index: number) => {
           return (

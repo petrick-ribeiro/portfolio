@@ -39,21 +39,21 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         <MenuCloseSVGIcon width={28} />
       </button>
 
-      <div className={`rounded-lg hover:bg-blue p-2 ${activeSection === "skills" ? "bg-blue" : ""}`} onClick={() => handleScroll("skills-section")}>
+      <div className={`sidebar-button ${activeSection === "skills" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("skills-section")}>
         <SideBarLink
           href="#skills"
-          isVisible={isOpen}
+          isNavbarOpen={isOpen}
           fill="#2C2C2C"
           width={28}
-          info="Habilidades"
+          info="Trabalho"
         >
           {SkillsSVGIcon}
         </SideBarLink>
       </div>
 
-      <div className={`rounded-lg p-2 ${activeSection === "projects" ? "bg-blue" : ""}`} onClick={() => handleScroll("")}>
+      <div className={`rounded-lg p-2 ${activeSection === "projects" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("")}>
         <SideBarLink
-          isVisible={isOpen}
+          isNavbarOpen={isOpen}
           fill="#7c7f93"
           width={28}
           info="Projetos"
@@ -62,10 +62,10 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         </SideBarLink>
       </div>
 
-      <div className={`rounded-lg p-2 hover:bg-blue ${activeSection === "work" ? "bg-blue" : ""}`} onClick={() => handleScroll("work-section")}>
+      <div className={`sidebar-button ${activeSection === "work" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("work-section")}>
         <SideBarLink
           href="#work"
-          isVisible={isOpen}
+          isNavbarOpen={isOpen}
           fill="#2C2C2C"
           width={28}
           info="Trabalho"
@@ -74,10 +74,10 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         </SideBarLink>
       </div>
 
-      <div className={`rounded-lg p-2 hover:bg-blue ${activeSection === "education" ? "bg-blue" : ""}`} onClick={() => handleScroll("education-section")}>
+      <div className={`sidebar-button ${activeSection === "education" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("education-section")}>
         <SideBarLink
           href="#education"
-          isVisible={isOpen}
+          isNavbarOpen={isOpen}
           fill="#2C2C2C"
           width={28}
           info="Formação"
@@ -86,10 +86,10 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         </SideBarLink>
       </div>
 
-      <div className={`rounded-lg p-2 hover:bg-blue ${activeSection === "courses" ? "bg-blue" : ""}`} onClick={() => handleScroll("courses-section")}>
+      <div className={`sidebar-button ${activeSection === "courses" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("courses-section")}>
         <SideBarLink
           href="#courses"
-          isVisible={isOpen}
+          isNavbarOpen={isOpen}
           fill="#2C2C2C"
           width={28}
           info="Cursos"

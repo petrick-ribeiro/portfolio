@@ -5,19 +5,11 @@ import WorkSVGIcon from "../../assets/svg/WorkSVGIcon";
 import EducationSVGIcon from "../../assets/svg/EducationSVGIcon";
 import LibraryBookSVGIcon from "../../assets/svg/LibraryBookSVGIcon";
 import { SideBarLink } from "./SideBarLink";
-import ProjectSVGIcon from "../../assets/svg/ProjectSVGIcon";
 import MenuCloseSVGIcon from "../../assets/svg/MenuCloseSVGIcon";
 import { SideBarProps } from "../types/SideBarProps";
 
 const SideBar = ({ activeSection }: SideBarProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleScroll = (sectionID: string) => {
-    const section = document.getElementById(sectionID)
-    if (sectionID) {
-      section?.scrollIntoView({ behavior: "smooth" })
-    }
-  }
 
   return (
     <aside className="h-full w-fit rounded-lg flex flex-col justify-start px-4 gap-6 bg-base shadow-lg">
@@ -39,64 +31,53 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         <MenuCloseSVGIcon width={28} />
       </button>
 
-      <div className={`sidebar-button ${activeSection === "skills" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("skills-section")}>
-        <SideBarLink
-          href="#skills"
-          isNavbarOpen={isOpen}
-          fill="#2C2C2C"
-          width={28}
-          info="Trabalho"
-        >
-          {SkillsSVGIcon}
-        </SideBarLink>
-      </div>
+      <SideBarLink
+        href="#skills"
+        isNavbarOpen={isOpen}
+        isLinkActive={activeSection === "skills"}
+        sectionID="skills-section"
+        fill="#2C2C2C"
+        width={28}
+        info="Habilidades"
+      >
+        {SkillsSVGIcon}
+      </SideBarLink>
 
-      <div className={`rounded-lg p-2 ${activeSection === "projects" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("")}>
-        <SideBarLink
-          isNavbarOpen={isOpen}
-          fill="#7c7f93"
-          width={28}
-          info="Projetos"
-        >
-          {ProjectSVGIcon}
-        </SideBarLink>
-      </div>
+      <SideBarLink
+        href="#work"
+        isNavbarOpen={isOpen}
+        isLinkActive={activeSection === "work"}
+        sectionID="work-section"
+        fill="#2C2C2C"
+        width={28}
+        info="Trabalho"
+      >
+        {WorkSVGIcon}
+      </SideBarLink>
 
-      <div className={`sidebar-button ${activeSection === "work" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("work-section")}>
-        <SideBarLink
-          href="#work"
-          isNavbarOpen={isOpen}
-          fill="#2C2C2C"
-          width={28}
-          info="Trabalho"
-        >
-          {WorkSVGIcon}
-        </SideBarLink>
-      </div>
+      <SideBarLink
+        href="#education"
+        isNavbarOpen={isOpen}
+        isLinkActive={activeSection === "education"}
+        sectionID="education-section"
+        fill="#2C2C2C"
+        width={28}
+        info="Formação"
+      >
+        {EducationSVGIcon}
+      </SideBarLink>
 
-      <div className={`sidebar-button ${activeSection === "education" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("education-section")}>
-        <SideBarLink
-          href="#education"
-          isNavbarOpen={isOpen}
-          fill="#2C2C2C"
-          width={28}
-          info="Formação"
-        >
-          {EducationSVGIcon}
-        </SideBarLink>
-      </div>
-
-      <div className={`sidebar-button ${activeSection === "courses" ? "sidebar-button-activated" : ""}`} onClick={() => handleScroll("courses-section")}>
-        <SideBarLink
-          href="#courses"
-          isNavbarOpen={isOpen}
-          fill="#2C2C2C"
-          width={28}
-          info="Cursos"
-        >
-          {LibraryBookSVGIcon}
-        </SideBarLink>
-      </div>
+      <SideBarLink
+        href="#courses"
+        isNavbarOpen={isOpen}
+        isLinkActive={activeSection === "courses"}
+        sectionID="courses-section"
+        fill="#2C2C2C"
+        width={28}
+        info="Cursos"
+      >
+        {LibraryBookSVGIcon}
+      </SideBarLink>
     </aside>
   );
 };

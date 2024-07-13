@@ -1,16 +1,24 @@
+import NewWindowLinkSVGIcon from "../../assets/svg/NewWindowLinkSVGIcon";
 import { AboutLabelProps } from "../types/AboutLabelProps";
 
 const AboutLabel = (props: AboutLabelProps) => {
   return (
     <div className="w-full rounded-md p-4 border border-white shadow-md bg-white">
-      <div className="flex items-center justify-start space-x-4">
+      <div className="flex items-center justify-start gap-4">
         <div className="rounded-full w-fit h-fit p-2 border border-blue bg-base shadow-md">
           {props.children}
         </div>
+
         <div>
           <p className="font-bold">{props.description}</p>
           <p className="text-subtext">{props.name}</p>
         </div>
+
+        {props.link && (
+          <a href={props.link} target="_blank" className="ml-auto">
+            <NewWindowLinkSVGIcon width={28} />
+          </a>
+        )}
       </div>
 
       <div className="text-subtext">

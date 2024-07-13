@@ -15,6 +15,7 @@ const CoursesSection = () => {
               name={course.name}
               description={course.description}
               endDate={course.endDate}
+              link={course.link}
             >
               <LibraryBookSVGIcon fill="#2C2C2C" />
             </AboutLabel>

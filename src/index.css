@@ -20,7 +20,7 @@
   }
 
   .sidebar-button-activated {
-    @apply transition delay-150 duration-100 bg-blue;
+    @apply transition delay-150 duration-100 bg-red;
   }
 }
 

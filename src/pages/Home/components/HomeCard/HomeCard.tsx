@@ -16,7 +16,7 @@ const HomeCard = () => {
           alt=""
         />
 
-        <div className="space-x-2">
+        <div className="space-x-2 text-brown">
           <div className="flex space-x-2">
             <img className="w-10" src={wavingGif} />
 
@@ -27,7 +27,7 @@ const HomeCard = () => {
         </div>
       </div>
 
-      <p className="font-roboto-serif text-lg">
+      <p className="font-roboto-serif text-lg text-brown">
         Entusiasta de Tecnologia,
         <br />
         Engenharia de Software e DevOps.
@@ -47,7 +47,7 @@ const HomeCard = () => {
         </Icon>
 
         <Icon link="https://github.com/petrick-ribeiro/portfolio">
-          <NewWindowLinkSVGIcon width={28} />
+          <NewWindowLinkSVGIcon width={28} fill="#4C2215" />
         </Icon>
       </div>
     </section>

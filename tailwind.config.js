@@ -6,8 +6,8 @@ export default {
     colors: {
       base: "#FDFEF6",
       black: "#2C2C2C",
-      blue: "#A4BDC2",
-      brown: "#6F5643",
+      blue: "#73BDA8",
+      brown: "#4C2215",
       peach: "#FFECDC",
       red: "#CC6B49",
       rose: "#E6DDDE",

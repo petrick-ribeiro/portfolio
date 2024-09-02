@@ -17,7 +17,7 @@ const WorkSection = () => {
               startDate={work.startDate}
               endDate={work.endDate}
             >
-              <WorkSVGIcon fill="#2C2C2C" />
+              <WorkSVGIcon fill="#4C2215" />
             </AboutLabel>
           );
         })}

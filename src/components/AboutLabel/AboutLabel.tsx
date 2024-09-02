@@ -4,8 +4,8 @@ import { AboutLabelProps } from "../types/AboutLabelProps";
 const AboutLabel = (props: AboutLabelProps) => {
   return (
     <div className="w-full rounded-md p-4 border border-white shadow-md bg-white">
-      <div className="flex items-center justify-start gap-4">
-        <div className="rounded-full w-fit h-fit p-2 border border-blue bg-base shadow-md">
+      <div className="flex items-center justify-start gap-4 text-brown">
+        <div className="rounded-full w-fit h-fit p-2 border border-white bg-base shadow-md">
           {props.children}
         </div>
 
@@ -16,7 +16,7 @@ const AboutLabel = (props: AboutLabelProps) => {
 
         {props.link && (
           <a href={props.link} target="_blank" className="ml-auto">
-            <NewWindowLinkSVGIcon width={28} />
+            <NewWindowLinkSVGIcon width={28} fill="#4C2215" />
           </a>
         )}
       </div>

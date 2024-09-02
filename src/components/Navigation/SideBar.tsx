@@ -10,6 +10,8 @@ import { SideBarProps } from "../types/SideBarProps";
 
 const SideBar = ({ activeSection }: SideBarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const iconColor = "#4C2215";
+  const iconColorHover = "#FDFEF6";
 
   return (
     <aside className="h-full w-fit rounded-lg flex flex-col justify-start px-4 gap-6 bg-base shadow-lg">
@@ -19,7 +21,7 @@ const SideBar = ({ activeSection }: SideBarProps) => {
           setIsOpen(true);
         }}
       >
-        <MenuSVGIcon width={28} />
+        <MenuSVGIcon width={28} fill={iconColor} />
       </button>
 
       <button
@@ -28,7 +30,7 @@ const SideBar = ({ activeSection }: SideBarProps) => {
           setIsOpen(false);
         }}
       >
-        <MenuCloseSVGIcon width={28} />
+        <MenuCloseSVGIcon width={28} fill={iconColor} />
       </button>
 
       <SideBarLink
@@ -36,7 +38,8 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         isNavbarOpen={isOpen}
         isLinkActive={activeSection === "skills"}
         sectionID="skills-section"
-        fill="#2C2C2C"
+        fill={iconColor}
+        fillHover={iconColorHover}
         width={28}
         info="Habilidades"
       >
@@ -48,7 +51,8 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         isNavbarOpen={isOpen}
         isLinkActive={activeSection === "work"}
         sectionID="work-section"
-        fill="#2C2C2C"
+        fill={iconColor}
+        fillHover={iconColorHover}
         width={28}
         info="Trabalho"
       >
@@ -60,7 +64,8 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         isNavbarOpen={isOpen}
         isLinkActive={activeSection === "education"}
         sectionID="education-section"
-        fill="#2C2C2C"
+        fill={iconColor}
+        fillHover={iconColorHover}
         width={28}
         info="Formação"
       >
@@ -72,7 +77,8 @@ const SideBar = ({ activeSection }: SideBarProps) => {
         isNavbarOpen={isOpen}
         isLinkActive={activeSection === "courses"}
         sectionID="courses-section"
-        fill="#2C2C2C"
+        fill={iconColor}
+        fillHover={iconColorHover}
         width={28}
         info="Cursos"
       >

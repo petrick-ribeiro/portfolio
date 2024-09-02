@@ -8,5 +8,6 @@ export type SidebarLinkProps = {
   sectionID: string;
   width: number;
   fill: string;
+  fillHover: string;
   info: string;
 };

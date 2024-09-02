@@ -15,6 +15,7 @@ export const SideBarLink = ({
   sectionID,
   width,
   fill,
+  fillHover,
   info,
 }: SidebarLinkProps) => {
   return (
@@ -25,7 +26,7 @@ export const SideBarLink = ({
         ${isLinkActive ? " sidebar-button-activated" : ""}`}
       onClick={() => handleScroll(sectionID)}
     >
-      <Icon width={width} fill={fill} />
+      <Icon width={width} fill={isLinkActive ? fillHover : fill} />
 
       <span
         className={`text-md text-center + ${isNavbarOpen ? "" : "hidden"} `}

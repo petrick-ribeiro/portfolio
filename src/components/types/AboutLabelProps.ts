@@ -4,4 +4,5 @@ export type AboutLabelProps = {
   description: string;
   startDate?: string;
   endDate: string;
+  link?: string;
 };

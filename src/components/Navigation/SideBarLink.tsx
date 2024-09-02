@@ -1,18 +1,36 @@
 import { SidebarLinkProps } from "../types/SidebarLinkProps";
 
+const handleScroll = (sectionID: string) => {
+  const section = document.getElementById(sectionID);
+  if (sectionID) {
+    section?.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 export const SideBarLink = ({
   href,
   children: Icon,
-  isVisible,
+  isNavbarOpen,
+  isLinkActive,
+  sectionID,
   width,
   fill,
+  fillHover,
   info,
 }: SidebarLinkProps) => {
   return (
-    <a href={href} className={`${isVisible ? "flex gap-2 items-center" : ""}`}>
-      <Icon width={width} fill={fill} />
+    <a
+      href={href}
+      className={`sidebar-button
+        ${isNavbarOpen ? " flex gap-2 items-center" : ""}
+        ${isLinkActive ? " sidebar-button-activated" : ""}`}
+      onClick={() => handleScroll(sectionID)}
+    >
+      <Icon width={width} fill={isLinkActive ? fillHover : fill} />
 
-      <span className={`text-md text-center + ${isVisible ? "" : "hidden"}`}>
+      <span
+        className={`text-md text-center + ${isNavbarOpen ? "" : "hidden"} `}
+      >
         {info}
       </span>
     </a>

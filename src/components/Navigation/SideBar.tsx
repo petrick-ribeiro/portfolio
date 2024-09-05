@@ -1,86 +1,56 @@
-import { useState } from "react";
-import MenuSVGIcon from "../../assets/svg/MenuSVGIcon";
 import SkillsSVGIcon from "../../assets/svg/SkillsSVGIcon";
 import WorkSVGIcon from "../../assets/svg/WorkSVGIcon";
 import EducationSVGIcon from "../../assets/svg/EducationSVGIcon";
 import LibraryBookSVGIcon from "../../assets/svg/LibraryBookSVGIcon";
 import { SideBarLink } from "./SideBarLink";
-import MenuCloseSVGIcon from "../../assets/svg/MenuCloseSVGIcon";
 import { SideBarProps } from "../types/SideBarProps";
 
 const SideBar = ({ activeSection }: SideBarProps) => {
-  const [isOpen, setIsOpen] = useState(false);
   const iconColor = "#4C2215";
   const iconColorHover = "#FDFEF6";
 
   return (
-    <aside className="h-full w-fit rounded-lg flex flex-col justify-start px-4 gap-6 bg-base shadow-lg">
-      <button
-        className={`${isOpen ? "hidden" : ""} p-2`}
-        onClick={() => {
-          setIsOpen(true);
-        }}
-      >
-        <MenuSVGIcon width={28} fill={iconColor} />
-      </button>
-
-      <button
-        className={`${isOpen ? "flex justify-end" : "hidden"} p-2`}
-        onClick={() => {
-          setIsOpen(false);
-        }}
-      >
-        <MenuCloseSVGIcon width={28} fill={iconColor} />
-      </button>
-
+    <aside className="h-full w-fit rounded-lg flex flex-col justify-start p-4 gap-6 bg-base shadow-lg">
       <SideBarLink
         href="#skills"
-        isNavbarOpen={isOpen}
         isLinkActive={activeSection === "skills"}
         sectionID="skills-section"
         fill={iconColor}
         fillHover={iconColorHover}
         width={28}
-        info="Habilidades"
       >
         {SkillsSVGIcon}
       </SideBarLink>
 
       <SideBarLink
         href="#work"
-        isNavbarOpen={isOpen}
         isLinkActive={activeSection === "work"}
         sectionID="work-section"
         fill={iconColor}
         fillHover={iconColorHover}
         width={28}
-        info="Trabalho"
       >
         {WorkSVGIcon}
       </SideBarLink>
 
       <SideBarLink
         href="#education"
-        isNavbarOpen={isOpen}
         isLinkActive={activeSection === "education"}
         sectionID="education-section"
         fill={iconColor}
         fillHover={iconColorHover}
         width={28}
-        info="Formação"
       >
         {EducationSVGIcon}
       </SideBarLink>
 
       <SideBarLink
         href="#courses"
-        isNavbarOpen={isOpen}
         isLinkActive={activeSection === "courses"}
         sectionID="courses-section"
         fill={iconColor}
         fillHover={iconColorHover}
         width={28}
-        info="Cursos"
       >
         {LibraryBookSVGIcon}
       </SideBarLink>

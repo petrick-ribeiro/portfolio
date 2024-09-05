@@ -16,7 +16,7 @@ const HomeCard = () => {
           alt=""
         />
 
-        <div className="space-x-2 text-brown">
+        <div className="space-x-2 text-black">
           <div className="flex space-x-2">
             <img className="w-10" src={wavingGif} />
 
@@ -27,7 +27,7 @@ const HomeCard = () => {
         </div>
       </div>
 
-      <p className="font-roboto-serif text-lg text-brown">
+      <p className="font-roboto-serif text-lg text-black">
         Entusiasta de Tecnologia,
         <br />
         Engenharia de Software e DevOps.

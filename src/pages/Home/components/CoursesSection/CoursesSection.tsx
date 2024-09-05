@@ -17,7 +17,7 @@ const CoursesSection = () => {
               endDate={course.endDate}
               link={course.link}
             >
-              <LibraryBookSVGIcon fill="#2C2C2C" />
+              <LibraryBookSVGIcon fill="#4C2215" />
             </AboutLabel>
           );
         })}

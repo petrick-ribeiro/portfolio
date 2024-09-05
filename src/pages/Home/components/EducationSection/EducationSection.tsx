@@ -17,7 +17,7 @@ const EducationSection = () => {
               startDate={education.startDate}
               endDate={education.endDate}
             >
-              <EducationSVGIcon fill="#2C2C2C" />
+              <EducationSVGIcon fill="#4C2215" />
             </AboutLabel>
           );
         })}

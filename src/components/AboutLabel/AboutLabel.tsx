@@ -1,7 +1,10 @@
+import { useState } from "react";
 import NewWindowLinkSVGIcon from "../../assets/svg/NewWindowLinkSVGIcon";
 import { AboutLabelProps } from "../types/AboutLabelProps";
 
 const AboutLabel = (props: AboutLabelProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="w-full rounded-md p-4 border border-white shadow-md bg-white">
       <div className="flex items-center justify-start gap-4 text-black">
@@ -15,8 +18,14 @@ const AboutLabel = (props: AboutLabelProps) => {
         </div>
 
         {props.link && (
-          <a href={props.link} target="_blank" className="ml-auto">
-            <NewWindowLinkSVGIcon width={28} fill="#4C2215" />
+          <a
+            href={props.link}
+            target="_blank"
+            className="ml-auto"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <NewWindowLinkSVGIcon width={28} fill={isHovered ? "#CC6B49" : "#4C2215"} />
           </a>
         )}
       </div>
@@ -33,3 +42,4 @@ const AboutLabel = (props: AboutLabelProps) => {
 };
 
 export default AboutLabel;
+
